@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  gap: .2em;
+  gap: 0.2em;
   flex-direction: column-reverse;
   align-items: flex-end;
   color: rgb(9, 8, 8);
@@ -20,4 +20,8 @@ a > span {
 
 a > span:hover {
   cursor: pointer;
+}
+
+.detail {
+   color: whitesmoke;
 }

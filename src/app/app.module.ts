@@ -10,11 +10,16 @@ import { BasicModule } from './basic_module/basic.module';
 import { MainComponent } from './components/main/main.component';
 import { CardComponent } from './components/card/card.component';
 import { SearchComponent } from './components/search/search.component';
-import { AppRouterModule } from './router.module';
-import { RouterModule } from '@angular/router';
+import { AppRouterModule } from './routes/router.module';
+import { ModalComponent } from './components/modal/modal.component';
+import { StarComponent } from './components/icons/star/star.component';
+import { TagComponent } from './components/icons/tag/tag.component';
+import { EyeComponent } from './components/icons/eye/eye.component';
+import { DownloadComponent } from './components/icons/download/download.component';
+import { UserComponent } from './components/icons/user/user.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, CardComponent, SearchComponent],
+  declarations: [AppComponent, MainComponent, CardComponent, SearchComponent, ModalComponent, StarComponent, TagComponent, EyeComponent, DownloadComponent, UserComponent],
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

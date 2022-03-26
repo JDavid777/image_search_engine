@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Image } from 'src/interfaces/image.interface';
 import { ApiService } from '../../services/api.service';
@@ -10,6 +10,8 @@ import { ApiService } from '../../services/api.service';
 })
 export class MainComponent implements OnInit {
   images: Image[] = [];
+  @ViewChild('viewDetail') modal!: ElementRef<HTMLInputElement>;
+  selected!: Image;
   page: number = 1;
   count: number = 0;
 
@@ -58,5 +60,9 @@ export class MainComponent implements OnInit {
   nextPag() {
     this.page = this.page + 1;
     this.getImages();
+  }
+  imageSelected(image: Image) {
+    this.selected = image;
+    console.log(this.selected);
   }
 }

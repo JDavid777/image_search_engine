@@ -1,0 +1,7 @@
+.modal{
+    background-color: rgba(148, 148, 148, 0.522);
+}
+.modal-content {
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.666);
+}

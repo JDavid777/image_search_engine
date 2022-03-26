@@ -1,7 +1,22 @@
 <app-navbar></app-navbar>
 <div class="mosaic bg-dark" *ngIf="images.length > 0; else elseBlock">
-  <app-card *ngFor="let image of images" alt="" [image]="image"></app-card>
+  <app-card
+    *ngFor="let image of images"
+    alt=""
+    [image]="image"
+    data-bs-toggle="modal"
+    data-bs-target="#viewDetail"
+    (click)="imageSelected(image)"
+  ></app-card>
 </div>
 
 <ng-template #elseBlock> No hay datos... </ng-template>
+
+<!-- Ventana modal para ver los detalles de la imagen -->
+<app-modal idModal="viewDetail">
+  <div modalBody>
+    <app-card [image]="selected" [viewDetail]="true"></app-card>
+  </div>
+  <div footer>ypor qui</div></app-modal
+>
 <button class="btn btn-primary" (click)="nextPag()">ir</button>

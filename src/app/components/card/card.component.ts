@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
   @Input()
   image!: Image;
   tags!: string[];
+  @Input() viewDetail: Boolean = false;
 
   constructor(private router: Router) {}
 
