@@ -26,7 +26,7 @@ export class ApiService {
     return this.http.get(this.END_POINT, { params: par });
   }
 
-  getImagesByaCategory(page: number, category: string): Observable<any> {
+  getImagesByCategory(page: number, category: string): Observable<any> {
     const par = this.params.set('category', category);
     return this.http.get(this.END_POINT, { params: par });
   }

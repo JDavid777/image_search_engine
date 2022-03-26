@@ -12,11 +12,11 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'images/:category/page/:page',
+    path: 'images/categories/:category/page/:page',
     component: MainComponent,
   },
   {
-    path: 'images/page/:page',
+    path: 'images/:query/page/:page',
     component: MainComponent,
   },
 ];

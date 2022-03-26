@@ -30,42 +30,60 @@
             aria-labelledby="navbarDarkDropdownMenuLink"
           >
             <li>
-              <a class="dropdown-item" (click)="searchCategory('science')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/science/page/1']"
                 >Ciencia</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('education')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/education/page/1']"
                 >Educación</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('people')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/people/page/1']"
                 >Personas</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('feelings')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/feelings/page/1']"
                 >Sentimientos</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('computer')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/computer/page/1']"
                 >Computadores</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('buildings')"
+              <a
+                class="dropdown-item"
+                [routerLink]="['/images/categories/buildings/page/1']"
                 >Edificios</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('industry')"
+              <a
+                class="dropdown-item"
+                (click)="searchCategory('industry')"
+                [routerLink]="['/images/categories/industrial/page/1']"
                 >Industrial</a
               >
             </li>
             <li>
-              <a class="dropdown-item" (click)="searchCategory('business')"
+              <a
+                class="dropdown-item"
+                (click)="searchCategory('business')"
+                [routerLink]="['/images/categories/business/page/1']"
                 >Negocios</a
               >
             </li>

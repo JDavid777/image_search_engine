@@ -16,16 +16,24 @@ export class MainComponent implements OnInit {
   constructor(
     private api: ApiService,
     private activatedRoute: ActivatedRoute,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       this.page = params['page'];
+      let category = params['category'];
+      let pattern = params['query'];
       if (!this.page || this.page == 0) {
         this.page = 1;
       }
-      this.getImages();
+      if (category) {
+        this.searchCategory(category);
+      } else if (pattern) {
+        this.search(pattern);
+      } else {
+        this.getImages();
+      }
     });
   }
 
@@ -43,7 +51,7 @@ export class MainComponent implements OnInit {
   }
 
   searchCategory(category: string) {
-    this.api.getImagesByaCategory(1, category).subscribe((response) => {
+    this.api.getImagesByCategory(1, category).subscribe((response) => {
       this.images = response.hits;
     });
   }
