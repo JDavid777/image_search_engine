@@ -12,6 +12,8 @@ SPA que permite realizar busqueda de imagenes, filtrar, ver detalles de una imag
 
 La aplicación se encuentra desplegada en Netlify, acceda a la misma desde el siguiente link: https://suplus-images.netlify.app/
 
+## Mockups
+https://balsamiq.cloud/spwl76s/pwk4q78
 ## Busqueda de imagenes
 
 Buscar imagenes usando un patron de busqueda personalizado
