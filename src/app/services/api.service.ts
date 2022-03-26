@@ -12,7 +12,7 @@ export class ApiService {
   private params = new HttpParams()
     .set('key', this.API_KEY)
     .set('lang', 'es')
-    .set('per_page', 3);
+    .set('per_page', 10);
 
   constructor(private http: HttpClient) {}
 

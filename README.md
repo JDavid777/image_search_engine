@@ -6,22 +6,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Soplus Images
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+SPA que permite realizar busqueda de imagenes, filtrar, ver detalles de una imagen. La aplicación cuenta con soporte para PWA, lo cual permite que se pueda instalar en los dispositivos actuando como una acplicación nativa.
 
-## Build
+La aplicación se encuentra desplegada en Netlify, acceda a la misma desde el siguiente link: https://suplus-images.netlify.app/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Busqueda de imagenes
 
-## Running unit tests
+Buscar imagenes usando un patron de busqueda personalizado
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Filtro por categorias
 
-## Running end-to-end tests
+Permite realizar busqueda con base en filtros predefinidos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalación y ejecución
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Ejecute el comando `npm i` en la raíz del proyecto para descargar las dependencias
+* Ejecute el comando `ng serve` para probar en un servidor de desarrollo

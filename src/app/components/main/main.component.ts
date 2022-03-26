@@ -69,8 +69,7 @@ export class MainComponent implements OnInit {
   }
 
   newPage(page: number) {
-    let query: string =
-      this.router.url.substring(0, this.router.url.length - 1) + page;
+    let query: string = this.router.url.replace(/[0-9]/, page.toString());
     this.router.navigate([query]);
   }
 }

@@ -9,3 +9,9 @@
   grid-gap:.3em;
 }
 
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}

@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card animate__flipInX">
   <img class="card-img-top" [src]="image.webformatURL" alt="Card image" />
   <div *ngIf="!viewDetail" class="card-img-info">
-    <a>
+    <a >
       <i-tag></i-tag>
       <span *ngFor="let tag of image.tags.split(',')" (click)="search(tag)">
         {{ tag }}
@@ -14,14 +14,15 @@
 <div *ngIf="viewDetail" class="detail mt-3">
   <div>
     <strong><i-star></i-star> Likes:</strong>
-    {{ image.likes }}
+    {{ image.likes | number }}
   </div>
   <div>
     <strong><i-user></i-user> Autor: </strong> {{ image.user }}
   </div>
   <div>
-    <strong><i-download></i-download> Descargas: </strong>{{ image.downloads }}
+    <strong><i-download></i-download> Descargas: </strong>{{ image.downloads | number}}
   </div>
+  <div><strong><i-eye></i-eye> Vistas: </strong> {{image.views | number}}</div>
 
   <a data-bs-dismiss="modal" aria-label="Close">
     <strong> <i-tag></i-tag> Etiquetas: </strong>
@@ -29,4 +30,5 @@
       {{ tag }},
     </span></a
   >
+
 </div>

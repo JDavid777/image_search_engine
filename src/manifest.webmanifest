@@ -1,7 +1,7 @@
 {
   "name": "suplus",
   "short_name": "suplus",
-  "theme_color": "#1976d2",
+  "theme_color": "rgba(245, 246, 247, 0.768)",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

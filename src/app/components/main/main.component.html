@@ -1,6 +1,6 @@
-<div class="mosaic bg-dark" *ngIf="images.length > 0; else elseBlock">
+<div class="mosaic" *ngIf="images.length > 0; else elseBlock">
   <app-card
-    class="item"
+    class="item animate__bounceInLeft"
     *ngFor="let image of images"
     alt=""
     [image]="image"
@@ -15,7 +15,9 @@
   [total]="count"
   [page]="page"
 ></app-paginator>
-<ng-template #elseBlock> No hay datos... </ng-template>
+<ng-template #elseBlock>
+  <div class="not-found"> <h1>No se encontraron resultados...</h1></div>
+</ng-template>
 
 <!-- Ventana modal para ver los detalles de la imagen -->
 <app-modal idModal="viewDetail">

@@ -16,28 +16,32 @@ export class PaginatorComponent implements OnInit {
 
   constructor() {}
 
+  //TODO: REFACTORIZAR
+
   ngOnInit(): void {
-    this.option1 = this.page ;
-    this.option2 = this.page ;
-    this.option1 ++;
-    this.option2 =this.option1+ 1;
+    this.option1 = this.page;
+    this.option2 = this.page;
+    this.option1++;
+    this.option2 = this.option1 + 1;
   }
 
   nextPage() {
     this.page++;
-    this.option1 = this.page + 1;
-    this.option2 = this.page + 2;
+    this.option1++;
+    this.option2 = this.option1 + 1;
     this.onPageChange.emit(this.page);
   }
   previousPage() {
     this.page--;
-    this.option1 = this.page + 1;
-    this.option2 = this.page + 2;
+    this.option1++;
+    this.option2 = this.option1 + 1;
     this.onPageChange.emit(this.page);
   }
   userSelectionPage(page: number) {
-    this.option1 = this.page + 1;
-    this.option2 = this.page + 2;
+    this.option1 = page;
+    this.option2 = page;
+    this.option1++;
+    this.option2 = this.option1 + 1;
     this.onPageChange.emit(page);
   }
 }

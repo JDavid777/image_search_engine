@@ -6,7 +6,7 @@ import { LandingPageComponent } from '../basic_module/landing-page/landing-page.
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent,
+    component: MainComponent,
   },
   {
     path: 'images/page/:page',
