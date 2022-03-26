@@ -1,11 +1,12 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from '../components/main/main.component';
+import { LandingPageComponent } from '../basic_module/landing-page/landing-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: LandingPageComponent,
   },
   {
     path: 'images/page/:page',

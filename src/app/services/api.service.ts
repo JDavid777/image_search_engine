@@ -12,7 +12,7 @@ export class ApiService {
   private params = new HttpParams()
     .set('key', this.API_KEY)
     .set('lang', 'es')
-    .set('per_page', 33);
+    .set('per_page', 3);
 
   constructor(private http: HttpClient) {}
 
@@ -27,7 +27,7 @@ export class ApiService {
   }
 
   getImagesByCategory(page: number, category: string): Observable<any> {
-    const par = this.params.set('category', category);
+    const par = this.params.set('page', page).set('category', category);
     return this.http.get(this.END_POINT, { params: par });
   }
 }

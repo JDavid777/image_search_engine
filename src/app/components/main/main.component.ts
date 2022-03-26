@@ -47,14 +47,16 @@ export class MainComponent implements OnInit {
   }
 
   search(value: string) {
-    this.api.getImagesByPattern(1, value).subscribe((response) => {
+    this.api.getImagesByPattern(this.page, value).subscribe((response) => {
       this.images = response.hits;
+      this.count = response.total;
     });
   }
 
   searchCategory(category: string) {
-    this.api.getImagesByCategory(1, category).subscribe((response) => {
+    this.api.getImagesByCategory(this.page, category).subscribe((response) => {
       this.images = response.hits;
+      this.count = response.total;
     });
   }
   nextPag() {
@@ -64,5 +66,11 @@ export class MainComponent implements OnInit {
   imageSelected(image: Image) {
     this.selected = image;
     console.log(this.selected);
+  }
+
+  newPage(page: number) {
+    let query: string =
+      this.router.url.substring(0, this.router.url.length - 1) + page;
+    this.router.navigate([query]);
   }
 }

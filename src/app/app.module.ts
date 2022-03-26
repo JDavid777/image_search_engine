@@ -19,7 +19,18 @@ import { DownloadComponent } from './components/icons/download/download.componen
 import { UserComponent } from './components/icons/user/user.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, CardComponent, SearchComponent, ModalComponent, StarComponent, TagComponent, EyeComponent, DownloadComponent, UserComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    CardComponent,
+    SearchComponent,
+    ModalComponent,
+    StarComponent,
+    TagComponent,
+    EyeComponent,
+    DownloadComponent,
+    UserComponent,
+  ],
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
