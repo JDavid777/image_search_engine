@@ -1,0 +1,15 @@
+<app-navbar
+  (onSearchValue)="search($event)"
+  (onSearchCategory)="searchCategory($event)"
+></app-navbar>
+<div class="mosaic bg-dark" *ngIf="images.length > 0; else elseBlock">
+  <img
+    *ngFor="let image of images"
+    [src]="image.webformatURL"
+    alt=""
+    width="100%"
+  />
+</div>
+
+<ng-template #elseBlock> No hay datos... </ng-template>
+<button class="btn btn-primary" (click)="nextPag()">ir</button>
