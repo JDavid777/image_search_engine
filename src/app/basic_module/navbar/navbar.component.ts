@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,20 +7,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  @Output() onSearchValue = new EventEmitter<string>();
-  @Output() onSearchCategory = new EventEmitter<string>();
-
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   //Emite el patrón de busqueda especificado en el input
   search(value: string) {
-    this.onSearchValue.emit(value);
-  }
-
-  //Emite el valor correspondiente a la categoría seleccionada en el dropdown
-  searchCategory(category:string){
-    this.onSearchCategory.emit(category)
+    this.router.navigate([`images/${value}/page/1`]);
   }
 }

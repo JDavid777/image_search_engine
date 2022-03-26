@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Image } from 'src/interfaces/image.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -7,13 +8,17 @@ import { Image } from 'src/interfaces/image.interface';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  
   @Input()
   image!: Image;
+  tags!: string[];
 
-  constructor() {
+  constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    this.tags = this.image.tags.split(',');
+    console.log(this.tags);
   }
-
-  ngOnInit(): void {}
+  search(value: string) {
+    this.router.navigate([`images/${value}/page/1`]);
+  }
 }
