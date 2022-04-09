@@ -1,4 +1,4 @@
-# Suplus
+# Image search engine
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
@@ -6,7 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Soplus Images
 
 SPA que permite realizar busqueda de imagenes, filtrar, ver detalles de una imagen. La aplicación cuenta con soporte para PWA, lo cual permite que se pueda instalar en los dispositivos actuando como una acplicación nativa.
 
